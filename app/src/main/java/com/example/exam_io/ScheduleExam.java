@@ -41,19 +41,7 @@ public class ScheduleExam extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_schedule_exam);
-        AlertDialog alerta;
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Como preencher?");
-        builder.setMessage("Não esqueça nenhum campo em branco na hora de agendar seu exame. O CPF deve ser inserido somente com números e a data deve ser separada por '/' no formato DD/MM/AAAA ");
-        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
-                Toast.makeText(ScheduleExam.this, "" + arg1, Toast.LENGTH_SHORT);
-            }
-        });
-        alerta = builder.create();
-        alerta.show();
+
 
         text_view_nome = findViewById(R.id.nome_schedule_exam);
         text_view_email = findViewById(R.id.email_schedule_exam);
@@ -110,7 +98,18 @@ public class ScheduleExam extends Activity {
             }
 
             if (text_view_nome.getText().toString().isEmpty() || text_view_email.getText().toString().isEmpty() || text_view_cpf.getText().toString().isEmpty() || data_exame.getText().toString().isEmpty()){
-                alert("Opa! Algum campo do formulário não foi preenchido... Verifique e tente novamente");
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.activity_schedule_exam);
+                AlertDialog alerta;
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Como preencher?");
+                builder.setMessage("Não esqueça nenhum campo em branco na hora de agendar seu exame. O CPF deve ser inserido somente com números e a data deve ser separada por '/' no formato DD/MM/AAAA. Se a data do exame estiver ocupada, será necessário escolher outra data que seja valida.");
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                    }
+                });
+                alerta = builder.create();
+                alerta.show();
                 ehValido = false;
             }
             if(spinner_exame.getSelectedItem().toString().equals("Selecione um item")){
