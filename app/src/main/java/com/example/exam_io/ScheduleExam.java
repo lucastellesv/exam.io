@@ -1,6 +1,8 @@
 package com.example.exam_io;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScheduleExam extends Activity {
+
+
+
     private void alert( String text){
         Toast.makeText(ScheduleExam.this, text, Toast.LENGTH_LONG).show();
     }
@@ -38,6 +43,17 @@ public class ScheduleExam extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule_exam);
+        AlertDialog alerta;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Como preencher?");
+        builder.setMessage("Não esqueça nenhum campo em branco na hora de agendar seu exame. O CPF deve ser inserido somente com números e a data deve ser separada por '/' no formato DD/MM/AAAA ");
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                Toast.makeText(ScheduleExam.this, "" + arg1, Toast.LENGTH_SHORT);
+            }
+        });
+        alerta = builder.create();
+        alerta.show();
 
         text_view_nome = findViewById(R.id.nome_schedule_exam);
         text_view_email = findViewById(R.id.email_schedule_exam);

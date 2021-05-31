@@ -24,6 +24,17 @@ public class AppointmentBook extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AlertDialog alerta;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Como usar?");
+        builder.setMessage("Dê um clique único sob o exame para edita-lo. Pressione o exame agendado para excluir.");
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                Toast.makeText(AppointmentBook.this, "" + arg1, Toast.LENGTH_SHORT);
+            }
+        });
+        alerta = builder.create();
+        alerta.show();
 
         setContentView(R.layout.activity_appointment_book);
         ExamDataAccessObject Data = (ExamDataAccessObject)getIntent().getSerializableExtra("lista");
