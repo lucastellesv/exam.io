@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#280D30">
+
+    <Button
+        android:id="@+id/botao_agendar_exame"
+        android:layout_width="196dp"
+        android:layout_height="96dp"
+        android:background="#361042"
+        android:fontFamily="serif"
+        android:text="@string/botao_agendar_exame"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#EAEAEA"
+        android:textColorLink="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="#361042"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.299" />
+
+    <Button
+        android:id="@+id/botao_sair"
+        android:layout_width="196dp"
+        android:layout_height="93dp"
+        android:background="#361042"
+        android:text="@string/botao_sair"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="#361042"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67" />
+
+    <Button
+        android:id="@+id/botao_agenda"
+        android:layout_width="196dp"
+        android:layout_height="91dp"
+        android:background="#361042"
+        android:fontFamily="serif"
+        android:text="@string/botao_agenda"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#FBFBFB"
+        android:textSize="18sp"
+        app:backgroundTint="#361042"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.487" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

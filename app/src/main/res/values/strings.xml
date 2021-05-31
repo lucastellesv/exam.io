@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">exam_io</string>
+    <string name="text_usuario_login">Usuario:</string>
+    <string name="todo_icon_login">icon_login</string>
+    <string name="text_senha_login">Senha:</string>
+    <string name="botao_entrar">entrar</string>
+    <string name="botao_agendar_exame">Agendar exame</string>
+    <string name="botao_agenda">Agenda</string>
+    <string name="botao_sair">sair</string>
+    <string name="exam_io">Exam.io</string>
+    <string name="todo_icon_home_page">TODO_ICON_HOME_PAGE</string>
+    <string name="todo_icon_splash_art">TODO_ICON_SPLASH_ART</string>
+    <string name="app_name_textview_splash">Exam.IO</string>
+    <string name="tipo_de_exame_textview">Tipo de exame:</string>
+    <string name="email_textview_schedule_exam">Email:</string>
+    <string name="nome_textview_schefule_exam">Nome:</string>
+    <string name="data_do_exame_schedule_exam">Data do exame:</string>
+    <string name="botao_cadastrar_agendamento">agendar</string>
+    <string name="cpf_schedule_exam">CPF:</string>
+    <string name="n_o">não</string>
+    <string name="sim">sim</string>
+    <string name="deseja_realmente_excluir_o_agendamento_selecionado">Deseja realmente excluir o agendamento selecionado?</string>
+
+    <string-array name="exames_spinner">
+        <item>Selecione um item</item>
+        <item>Hemograma</item>
+        <item>Colesterol</item>
+        <item>Creatinina/ureia</item>
+        <item>Glicemia</item>
+        <item>COVID-19</item>
+    </string-array>
+</resources>
